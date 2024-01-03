@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-Poppins scroll-smooth;
+}
+
+body {
+  @apply box-border bg-gray-900 text-gray-100 overflow-x-hidden;
+}
+
+.btn-primary {
+  @apply bg-cyan-600 font-semibold text-white rounded-full px-5 py-3 hover:bg-slate-300 duration-300 hover:text-cyan-600 ;
+  /*  mt-8 hover:bg-slate-300 duration-300 hover:text-cyan-600 */
+}
+
+.nav__link::before {
+  @apply content-[''] absolute left-1/2 w-[5px] h-[5px] -bottom-2 rounded-full  ;
+}
+
+.nav__link::before:hover {
+  @apply bg-cyan-600
+}
+
+.aboutImg::after {
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-gray-700 -z-10 
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top:1rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+
+  width: 32px !important;
+  height: 32px !important;
+
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color:gray;
+  font-size:1rem !important;
+  background-color:white;
+  font-weight:bold;
+  border-radius: 50%;
+  position:relative;  
+  padding-top:.5rem;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+input, textarea {
+  @apply bg-gray-700 outline-none rounded-lg p-3;
+}
+
+::placeholder {
+  @apply text-lg;
+}
+
+::selection {
+  @apply bg-cyan-600;
+}
